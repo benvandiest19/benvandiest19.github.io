@@ -1,0 +1,23 @@
+.test-class {
+  text-shadow: -10px 10px red;
+  font-size:40px;
+  text-align: center;
+}
+
+#test-id-1 {
+  font-style: italic;
+  color:pink;
+  font-size: 300%;
+}
+
+a:hover {
+  color:yellow;
+}
+
+h3 {
+  color: purple;
+}
+
+p::first-letter {
+  font-size: 300%; 
+}
