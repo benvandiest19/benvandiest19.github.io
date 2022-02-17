@@ -1,0 +1,59 @@
+a {
+  color:#F45693;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#CC128C;
+  text-decoration: none;
+}
+
+a:focus {
+  color:#f18076;
+  text-decoration: none;
+}
+
+ol {
+  font-style: italic;
+  list-style-type:lower-roman;
+}
+
+ul {
+  list-style-type: circle;
+  font-weight: lighter;
+
+}
+
+#title {
+  font-weight: bold;
+  text-shadow: 0px 10px 3px #F45693;
+  font-size:40px;
+  text-align: center;
+}
+
+hr {
+  border:1px solid #CC128C;
+}
+
+.grad {
+  background-image: radial-gradient( white 90%, #f18076, #F45693, #CC128C )
+
+}
+
+img {
+  width: 300px;
+  height:400px;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: lighter;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  font-family: sans;
+}
+
+li {
+  font-family:fantasy;
+}
