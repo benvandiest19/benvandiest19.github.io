@@ -61,6 +61,7 @@ ul {
 }
 
 hr {
+  display:block;
   border:1px solid #CC128C;
 }
 
@@ -71,25 +72,37 @@ table {
   margin-bottom: 10px;
 }
 
-#title {
-  font-weight: bold;
+img {
+  border-radius: 10%
+}
+
+.title {
+  font-weight: 300;
+  font-style: oblique;
   text-shadow: 0px 10px 3px #F45693;
   font-size:40px;
-  text-align: center;
+  text-align: left;
+  margin-left: 75px
 }
 
 #pic1 {
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  text-align: center;
-  width: 250px;
-  height:300px;
+  width: 100%;
+  width: 300px;
+  height:400px;
+  float: right;
+  margin-right: 200px
 }
 
-.center {
-  text-align: center;
+.flow {
+  display: flex;
+}
+
+.page {
+  text-align: left;
+  margin-left: 50px
 }
 
 .grad {
@@ -102,4 +115,5 @@ table {
   margin-right: 80px;
   text-decoration: none;
   color: #CC128C;
+  font-style: italic;
 }
