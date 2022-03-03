@@ -61,7 +61,7 @@ ul {
 }
 
 hr {
-  display:block;
+  /* display:block; */
   border:1px solid #CC128C;
 }
 
@@ -76,16 +76,6 @@ img {
   border-radius: 10%
 }
 
-.title {
-  font-weight: 300;
-  font-style: oblique;
-  text-shadow: 0px 10px 3px #F45693;
-  font-size:40px;
-  text-align: left;
-  margin-left: 75px;
-  margin-top: 30px;
-}
-
 #pic1 {
   display: flex;
   margin-left: auto;
@@ -97,24 +87,54 @@ img {
   margin-right: 200px
 }
 
-.vertical {
+.nav {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr .75fr .75fr .75fr;
+  grid-template-rows: 1fr 1fr 0.75fr 0.3fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 0px;
+  overflow: hidden;
+  background-color: rgba(241, 128, 118, 0.09);
+  position: relative;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 3;
+  font-weight: 300;
+  font-style: oblique;
+  text-shadow: 0px 10px 3px #F45693;
+  font-size:40px;
+  text-align: left;
+  margin-left: 75px;
+  margin-top: 30px;
+}
+
+.div2 {
+  grid-area: 1 / 2 / 2 / 4;
   border:1px solid #CC128C;
   height: 113px;
   position:sticky;
   left: 25%;
   margin-left: 0px;
-  top: 0;
 }
 
-.nav {
-  display: flex;
-  box-sizing:border-box ;
-  width: 100%;
-  height: 75%;
-  overflow: hidden;
-  background-color: rgba(241, 128, 118, 0.09);
-  position: relative;
+.div3 {
+  grid-area: 1 / 3 / 2 / 3;
+  margin-left: 50px;
+
 }
+.div4 { grid-area: 1 / 4 / 2 / 7; }
+.div5 { grid-area: 1 / 5 / 2 / 6; }
+.div6 { grid-area: 1 / 6 / 2 / 7; }
+.div7 {
+  grid-area: 2 / 3 / 4 / 3;
+  font-size: 30px;
+}
+.div8 {
+  grid-area: 3 / 3 / 5 / 3;
+  font-size: 20px;
+}
+.div9 { grid-area: 2 / 4 / 4 / 4; }
 
 .page {
   text-align: left;
@@ -127,9 +147,26 @@ img {
 
 .contents {
   font-size: 25px;
-  margin-right: 70px;
-  margin-top: 30px;
   text-decoration: none;
   color: #CC128C;
   font-style: italic;
+  margin-bottom: 100px;
+}
+
+/* MEDIA QUERIES */
+
+@@media only screen and (min-width: 600px) {
+  html {font-size: 60%;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: .5fr;
+    grid-template-rows: 1fr repeat(4, .75fr) 1.5fr 3fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    overflow: hidden;
+    background-color: rgba(241, 128, 118, 0.09);
+    position: relative;
+  }
+
 }
