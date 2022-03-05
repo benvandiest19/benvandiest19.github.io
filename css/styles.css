@@ -19,7 +19,7 @@ h3 {
 }
 
 h4 {
-  font-style: normal;
+  font-style: italic;
   font-weight: 300;
 }
 
@@ -41,6 +41,7 @@ a {
 a:hover {
   color:#CC128C;
   text-decoration: none;
+  opacity: 0.5;
 }
 
 a:focus {
@@ -54,6 +55,11 @@ ol {
   font-weight: 300;
 }
 
+li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 ul {
   list-style-type: circle;
   font-weight: lighter;
@@ -61,12 +67,11 @@ ul {
 }
 
 hr {
-  /* display:block; */
   border:1px solid #CC128C;
 }
 
 table {
-  table-layout: fixed;
+  table-layout:auto;
   border-spacing: 0px;
   margin-top: 0px;
   margin-bottom: 10px;
@@ -76,7 +81,56 @@ img {
   border-radius: 10%
 }
 
+/* ICON LIBRARY STUFF */
+.fa {
+  padding: 20px;
+  font-size: 50px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.fa:hover {
+  opacity: 0.9;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #f18076;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-phone {
+  font-size: 100px;
+  background: #636363;
+  color: white;
+}
+/* ICON LIBRARY STUFF */
+
 #pic1 {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  width: 300px;
+  height:325px;
+  float: right;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+
+#pic2 {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -89,8 +143,8 @@ img {
 
 .nav {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr .75fr .75fr .75fr;
-  grid-template-rows: 1fr 1fr 0.75fr 0.3fr;
+  grid-template-columns: 2fr 1fr 3.5fr .75fr .75fr .75fr;
+  grid-template-rows: 1.3fr .5fr 2fr 1.5fr;
   grid-column-gap: 15px;
   grid-row-gap: 0px;
   overflow: hidden;
@@ -103,7 +157,7 @@ img {
   font-weight: 300;
   font-style: oblique;
   text-shadow: 0px 10px 3px #F45693;
-  font-size:40px;
+  font-size:3vw;
   text-align: left;
   margin-left: 75px;
   margin-top: 30px;
@@ -123,24 +177,34 @@ img {
   margin-left: 50px;
 
 }
-.div4 { grid-area: 1 / 4 / 2 / 7; }
-.div5 { grid-area: 1 / 5 / 2 / 6; }
-.div6 { grid-area: 1 / 6 / 2 / 7; }
+
+.div4 {
+  grid-area: 1 / 4 / 2 / 7;
+}
+
+.div5 {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.div6 {
+  grid-area: 1 / 6 / 2 / 7;
+}
+
 .div7 {
   grid-area: 2 / 3 / 4 / 3;
-  font-size: 30px;
+  font-size: 25px;
+  font-size: 2vmax;
 }
 .div8 {
   grid-area: 3 / 3 / 5 / 3;
-  font-size: 20px;
+  font-size: 25px;
+  font-size: 1.5vmax;
 }
 .div9 { grid-area: 2 / 4 / 4 / 4; }
 
-.page {
-  text-align: left;
-  margin-left: 75px
+.div10 {
+  grid-area: 2 / 4 / 4 / 4;
 }
-
 .grad {
   background-image: radial-gradient( white 90%, #f18076, #F45693, #CC128C );
 }
@@ -150,23 +214,98 @@ img {
   text-decoration: none;
   color: #CC128C;
   font-style: italic;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  margin-right: 10px;
 }
 
-/* MEDIA QUERIES */
+/* PHONE MEDIA QUERIES */
 
-@@media only screen and (min-width: 600px) {
-  html {font-size: 60%;
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 5%;
+
   }
+  body {
+    text-align: center;
+  }
+
+  #pic1 {
+    width:225px;
+    height:250px;
+    float:none;
+    margin-right: 125px;
+    margin-top: 15px;
+  }
+
+  #pic2 {
+    width:225px;
+    height:300px;
+    float:none;
+    margin-right: 125px;
+    margin-top: 15px;
+  }
+
   .nav {
-    display: grid;
-    grid-template-columns: .5fr;
-    grid-template-rows: 1fr repeat(4, .75fr) 1.5fr 3fr 1fr;
+    display:grid;
+    overflow: auto;
+    grid-template-columns: 3fr;
+    grid-template-rows: 1fr repeat(5, .75fr) 2fr 3fr 1fr;
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    overflow: hidden;
-    background-color: rgba(241, 128, 118, 0.09);
-    position: relative;
+    grid-row-gap: 15px;
+  }
+
+  .contents {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 1 / 1;
+    font-size:40px;
+    text-align: center;
+    margin-left: 15px;
+  }
+
+  .div2 {
+    grid-area: 2 / 1 / 2 / 1;
+    width: 760px;
+    height: 0px;
+    position: absolute;
+    left: 0%;
+  }
+
+  .div3 {
+    grid-area: 3 / 1 / 3 / 1;
+    margin-left: 15px;
+
+  }
+
+  .div4 {
+    grid-area: 4 / 1 / 4 / 1;
+  }
+
+  .div5 {
+    grid-area: 5 / 1 / 5 / 1;
+  }
+
+  .div6 {
+    grid-area: 6 / 1 / 6 / 1;
+  }
+
+  .div7 {
+    grid-area: 7 / 1 / 4 / 1;
+    font-size: 35px;
+    font-size: 6vw;
+    text-align: center;
+  }
+  .div8 {
+    grid-area: 9 / 1 / 8 / 1;
+    font-size: 20px;
+    font-size: 4vw;
+    text-align: center;
+  }
+  .div9 {
+    grid-area: 8 / 1 / 5 / 1;
   }
 
 }
