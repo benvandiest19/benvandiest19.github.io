@@ -1,0 +1,55 @@
+.slide-in {
+  /* transition: <property> <duration> <timing-function> <delay */
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 0.5s;
+}
+
+.slide-in:hover {
+  font-size: 300%;
+}
+
+a {
+  flex:1;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease-out 1s;
+}
+
+a:hover,
+a:focus {
+  background-color: #fff;
+  color:#333;
+}
+
+/*
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300px;
+  }
+
+  50% {
+    margin-left:40%;
+    color: red;
+    font-size: 100px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.slide-in {
+  animation: 3s 5 alternate slidein;
+  font-size:1%
+  /* animation-duration: 4s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+} */
