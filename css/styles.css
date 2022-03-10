@@ -83,14 +83,14 @@ img {
   border-radius: 10%
 }
 
-#hidden {
+.hidden {
   font-style: italic;
   font-weight: 300;
   font-size: 75%;
   opacity:0;
 }
 
-#hidden:hover {
+.hidden:hover {
   opacity:1;
 }
 
@@ -131,7 +131,7 @@ img {
 }
 /* ICON LIBRARY STUFF */
 
-#pic1 {
+.pic1 {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -143,7 +143,7 @@ img {
   margin-top: 20px;
 }
 
-#pic2 {
+.pic2 {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -364,7 +364,7 @@ img {
     text-align: center;
   }
 
-  #pic1 {
+  .pic1 {
     width:225px;
     height:250px;
     float:none;
@@ -372,7 +372,7 @@ img {
     margin-top: 15px;
   }
 
-  #pic2 {
+  .pic2 {
     width:225px;
     height:300px;
     float:none;
