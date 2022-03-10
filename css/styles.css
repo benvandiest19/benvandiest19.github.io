@@ -26,11 +26,13 @@ h4 {
 h5 {
   font-style: italic;
   font-weight: 300;
+  font-size: 60%;
 }
 
 h6 {
   font-style: oblique;
   font-weight:200;
+  font-size: 60%;
 }
 
 a {
@@ -81,6 +83,17 @@ img {
   border-radius: 10%
 }
 
+#hidden {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 75%;
+  opacity:0;
+}
+
+#hidden:hover {
+  opacity:1;
+}
+
 /* ICON LIBRARY STUFF */
 .fa {
   padding: 20px;
@@ -117,6 +130,57 @@ img {
   color: white;
 }
 /* ICON LIBRARY STUFF */
+
+/* IMAGE FADER STUFF */
+.image-fader {
+  width: 100%;
+  width: 300px;
+  height:325px;
+  grid-area: 2 / 4 / 4 / 4;
+  padding: 10px;
+}
+
+.image-fader img {
+  position:absolute;
+  animation-name: imagefade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+}
+
+@keyframes imagefade {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.image-fader img:nth-of-type(1) {
+  animation-delay: 9s;
+}
+.image-fader img:nth-of-type(2) {
+  animation-delay: 6s;
+}
+.image-fader img:nth-of-type(3) {
+  animation-delay: 3s;
+}
+.image-fader img:nth-of-type(4) {
+  animation-delay: 0s;
+}
+
+/* IMAGE FADER STUFF */
+
 
 #pic1 {
   display: flex;
@@ -229,11 +293,18 @@ img {
     text-align: center;
   }
 
+  .image-fader {
+    width:225px;
+    height:250px;
+    grid-area: 8 / 1 / 5 / 1;
+    float: none;
+  }
+
   #pic1 {
     width:225px;
     height:250px;
     float:none;
-    margin-right: 125px;
+    margin-right: 130px;
     margin-top: 15px;
   }
 
