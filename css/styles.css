@@ -57,6 +57,10 @@ a:focus {
   text-decoration: none;
 }
 
+.myName {
+  color:#000000;
+}
+
 ol {
   font-style: italic;
   list-style-type:lower-roman;
