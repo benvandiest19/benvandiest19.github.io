@@ -16,17 +16,29 @@ randomize.addEventListener('click', result);
 
 function result() {
 
-  if(customName.value !== '') {
+  let newStory = storyText //#1
+
+  let xItem = randomValueFromArray(insertX); //#2
+  let yItem = randomValueFromArray(insertY); //#2
+  let zItem = randomValueFromArray(insertZ); //#2
+
+  newStory = newStory.replace(/:insertx:/g,xItem);  //#3 -- replace
+  newStory = newStory.replace(/:inserty:/g,yItem);  //#3 -- replace
+  newStory = newStory.replace(/:insertz:/g,zItem);  //#3 -- replace
+
+  if(customName.value !== '') {  //#4
     const name = customName.value;
-
+    newStory = newStory.replace(/Bob/g,name)
   }
 
-  if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
+  if(document.getElementById("uk").checked) { //#5
+    const weight = Math.round(300*0.0714286)  + " stone";
+    const temperature =  Math.round((94-32)*(5/9))  + " centigrade";
 
+    newStory = newStory.replace(/300 pounds/g,weight);
+    newStory = newStory.replace(/94 fahrenheit/g,temperature);
   }
 
-  story.textContent = ;
+  story.textContent = newStory; //#6
   story.style.visibility = 'visible';
 }
