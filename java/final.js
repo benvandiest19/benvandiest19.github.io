@@ -43,7 +43,7 @@
       if(userAnswer === currentQuestion.correctAnswer){
         numCorrect++;
 
-        answerContainers[questionNumber].style.color = "#f18076";
+        answerContainers[questionNumber].style.color = "#83C760";
       }
       else{
         answerContainers[questionNumber].style.color = "#CC128C";
@@ -53,22 +53,22 @@
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 
     if (numCorrect == 0){
-      alert("Huh, looks like you aren't even close to being my best friend. But hey, there is still a chance...right?")
+      alert("Friendship Score - 0/5: Huh, looks like you aren't even close to being my best friend. But hey, there is still a chance...right?")
     }
     if (numCorrect == 1){
-      alert("Okay... you didn't completely fail, but also didn't do well. Like at all.")
+      alert("Friendship Score - 1/5: Okay... you didn't completely fail, but also didn't do well. Like at all. We probably can't be friends just yet.")
     }
     if (numCorrect == 2){
-      alert("We don't really have much in common. We -might- find each other at the same (insert name here) convention.")
+      alert("Friendship Score - 2/5: We don't really have much in common. We -might- find each other at the same (insert name here) convention.")
     }
     if (numCorrect == 3){
-      alert("I will call you my acquaintance. Not a stranger, yet not a friend. Just -Acquaintance-")
+      alert("Friendship Score - 3/5: I will call you my acquaintance. Not a stranger, yet not a friend. Just -Acquaintance-")
     }
     if (numCorrect == 4){
-      alert("Not too bad! You have guaranteed a birthday party invite (if this were 5th grade).")
+      alert("Friendship Score - 4/5: Not too bad! You have guaranteed a birthday party invite (if this were 5th grade).")
     }
     if (numCorrect == 5){
-      alert("Where have you been all my life!? We must be best friends! *Disclaimer: These 5 questions are not at all indicative of our true friendship. You must pass the guantlet to be a true friend...*")
+      alert("Friendship Score - 5/5: Where have you been all my life!? We must be best friends! *Disclaimer: These 5 questions are not at all indicative of our true friendship. You must pass the guantlet to be a true friend...*")
     }
   }
 
